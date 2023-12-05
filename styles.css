@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+  }
+
+/* body {
+    border: 1px dotted black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+} -- necessary ? */
+
+.main-container {
+    width: 1440px;
+    height: 1024px;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+}
+
+.left-container {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-start;
+}
+
+div .left-container > img {
+    width: 682.67px;
+    height: 1024px;
+}
+
+div .right-container {
+    display: flex;
+    flex: 2 1 auto;
+    justify-content: center;
+    /* margin-right: 90px; -- if moving from right margin is needed */
+}
+
