@@ -1,40 +1,192 @@
-* {
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .body-container {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    
+  .main-container {
+    display: flex;
+    flex: 1;
+  }
+    
+  .content-container {
+    flex: 1;
+  }
+  
+  .img-container {
+    flex: 0 0 40em;
+    min-width: 40%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 75%;
+    order: -1; /* put image to the left */
+  }
+  
+  .background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(daniel-lincoln-xm49F658RyM-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .img-credit {
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 11px;
+    color: lightgray;
+  }
+  
+  #img-credit a {
+    color: lightgray;
+    text-decoration: underline;
+  }
+  
+  .logo-band {
+    display: flex;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    width: 100%;
+    min-height: 12%; /* to contain logo image */
+    background-color: rgb(15, 15, 15);
+    opacity: 60%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-band img {
+    width: 40%;
+  }
+  
+  .description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 25%;
+    background-color: whitesmoke;
+    font-size: 18px;
+    font-weight: 400;
+    justify-content: flex-end;
+    padding-left: 40px;
+    padding-bottom: 20px;
+  }
+  
+  .form-area {
+    display: flex;
+    /* box-sizing: border-box; */
+    padding: 2rem;
+    background-color: hsl(0, 0%, 100%);
+    gap: 2rem; /* space between rows and columns */
+    width: 100%;
+    height: 22.5%;
+    align-items: flex-end;
+  }
+  
+  .form-row {
+    /* grid-column: span 2; */
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .form-area-radio {
+    align-self: center;
+  }
+  
+  label, input {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+  }
+  
+  /* label:after {
+    content:"*";
+    font-size: 8px;
+    color:red;
+    position: relative;
+    top: 8px;
+  } */
+  
+  input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, input[type=tel]:focus {
+    border: 1px solid rgb(35, 64, 208);
+    outline: none;
+    box-shadow: 2px 2px 6px 1px lightgray;
+  }
+  
+  input[type=text], input[type=email], input[type=password], input[type=tel] {
+    border: 2px solid lightgray;
+    border-radius: 6px;
+    width: 100%;
+    padding: 3px 3px;
+    margin: 3px 0;
     box-sizing: border-box;
   }
 
-/* body {
-    border: 1px dotted black;
-    margin: 0;
-    padding: 0;
+  input:invalid {
+    border: 1px solid red;
+    outline: none;
+    box-shadow: 2px 2px 6px 1px lightpink;
+    transition: .5s;
+  }
+  
+  .btn-area {
+    /* flex -- with flex shrink, etc ?? */
     width: 100%;
-    height: 100%;
-} -- necessary ? */
-
-.main-container {
-    width: 1440px;
-    height: 1024px;
-}
-
-.form-container {
-    display: flex;
-    align-items: center;
-}
-
-.left-container {
-    display: flex;
-    flex: 1 1 auto;
-    justify-content: flex-start;
-}
-
-div .left-container > img {
-    width: 682.67px;
-    height: 1024px;
-}
-
-div .right-container {
-    display: flex;
-    flex: 2 1 auto;
-    justify-content: center;
-    /* margin-right: 90px; -- if moving from right margin is needed */
-}
-
+    min-height: 16%;
+    max-height: 20%;
+    background-color: whitesmoke;
+    padding: 20px;
+    font-size: .9em;
+  }
+  
+  button {
+    margin: 20px;
+    background-color: darkslategray;
+    color: #fff;
+    font-size: 1em;
+    border: none; 
+    border-radius: 10px; 
+    box-shadow: 2px 2px 6px gray;
+    padding: 15px;
+    min-height: 30px; 
+    min-width: 215px;
+    margin-bottom: 30px;
+  }
+  
+  button:hover {
+    background-color: darkolivegreen;
+    transition: 1s;
+  }
+  
+  button + div {
+    margin-left: 20px;
+  }
+  
+  /* unvisited link */
+  a:link {
+    color: darkslategray;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: darkred;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: red;
+  }
