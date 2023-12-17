@@ -135,7 +135,7 @@ body {
     box-sizing: border-box;
   }
 
-  input:invalid {
+  input:user-invalid {
     border: 1px solid red;
     outline: none;
     box-shadow: 2px 2px 6px 1px lightpink;
@@ -190,3 +190,21 @@ body {
   a:hover {
     color: red;
   }
+
+
+  /* This is the style for error messages */
+.error {
+  width: 20%;
+  padding: 0;
+
+  font-size: 75%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 4px 4px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
